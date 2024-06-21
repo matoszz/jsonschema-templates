@@ -1,0 +1,14 @@
+env:
+  APP_NAME: ${BUILDKITE_PIPELINE_SLUG}
+steps:
+  - group: ":test_tube: Tests"
+    key: "tests"
+    steps:
+      - label: ":golangci-lint: lint :lint-roller:"
+        key: "lint"
+        plugins:
+          - docker#v5.11.0:
+              image: "registry.hub.docker.com/golangci/golangci-lint:v1.59.0"
+              command: ["golangci-lint", "run", "-v", "--timeout", "10m"]
+              environment:
+                - "GOTOOLCHAIN=auto"
