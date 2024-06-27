@@ -16,8 +16,8 @@ const (
 	tagName        = "json"
 	skipper        = "-"
 	defaultTag     = "default"
-	jsonSchemaPath = "./invoice/generate/datum.invoice.json"
-	yamlConfigPath = "./invoice/generate/datum.invoice.yaml"
+	jsonSchemaPath = "jsonschemas/datum.invoice.json"
+	yamlConfigPath = "jsonschemas/datum.invoice.yaml"
 	ownerReadWrite = 0600
 )
 
