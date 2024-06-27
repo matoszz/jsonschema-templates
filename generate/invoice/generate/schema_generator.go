@@ -8,7 +8,7 @@ import (
 	"github.com/invopop/yaml"
 	"github.com/mcuadros/go-defaults"
 
-	"github.com/datumforge/jsonschema-templates/invoice"
+	"github.com/datumforge/jsonschema-templates/generate/invoice"
 )
 
 // const values used for the schema generator

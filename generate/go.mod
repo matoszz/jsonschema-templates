@@ -1,4 +1,4 @@
-module github.com/datumforge/jsonschema-templates
+module github.com/datumforge/jsonschema-templates/generate
 
 go 1.22.4
 
