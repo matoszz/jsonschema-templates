@@ -6,9 +6,11 @@ steps:
     steps:
       - label: ":golangci-lint: lint :lint-roller:"
         key: "lint"
+        command:
+          - cd generate;
+          - golangci-lint run -v --timeout=10m --config=.golangci.yaml
         plugins:
           - docker#v5.11.0:
-              image: "registry.hub.docker.com/golangci/golangci-lint:v1.59.0"
-              command: ["golangci-lint", "run", "-v", "--timeout", "10m"]
+              image: "registry.hub.docker.com/golangci/golangci-lint:v1.59.1"
               environment:
                 - "GOTOOLCHAIN=auto"
