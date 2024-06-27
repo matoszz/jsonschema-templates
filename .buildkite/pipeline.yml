@@ -8,8 +8,8 @@ steps:
         key: "lint"
         plugins:
           - docker#v5.11.0:
-              image: "registry.hub.docker.com/golangci/golangci-lint:v1.59.0"
+              image: "registry.hub.docker.com/golangci/golangci-lint:v1.59.1"
               workdir: "/workdir/generate"
-              command: ["golangci-lint", "run", "-v", "--timeout", "10m"]
+              command: ["golangci-lint", "run", "-v", "--timeout", "10m", "--config", ".golangci.yaml"]
               environment:
                 - "GOTOOLCHAIN=auto"
