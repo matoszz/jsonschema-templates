@@ -8,7 +8,7 @@ import (
 	"github.com/invopop/yaml"
 	"github.com/mcuadros/go-defaults"
 
-	"github.com/datumforge/jsonschema-templates/invoice"
+	"github.com/datumforge/jsonschema-templates/generate/invoice"
 )
 
 // const values used for the schema generator
@@ -16,8 +16,8 @@ const (
 	tagName        = "json"
 	skipper        = "-"
 	defaultTag     = "default"
-	jsonSchemaPath = "./invoice/generate/datum.invoice.json"
-	yamlConfigPath = "./invoice/generate/datum.invoice.yaml"
+	jsonSchemaPath = "../jsonschemas/datum.invoice.json"
+	yamlConfigPath = "../jsonschemas/datum.invoice.yaml"
 	ownerReadWrite = 0600
 )
 
@@ -50,7 +50,7 @@ func generateSchema(c schemaConfig, structure interface{}) error {
 	// set the tag name to `koanf` for the koanf struct tags
 	r.FieldNameTag = tagName
 
-	if err := r.AddGoComments("github.com/datumforge/jsonschema-templates/", "./"); err != nil {
+	if err := r.AddGoComments("github.com/datumforge/jsonschema-templates/generate", "./"); err != nil {
 		panic(err.Error())
 	}
 

@@ -3,7 +3,7 @@ run:
   allow-serial-runners: true
 linters-settings:
   goimports:
-    local-prefixes: github.com/datumforge/datum-cloud
+    local-prefixes: github.com/datumforge/jsonschema-templates/generate
   gofumpt:
     extra-rules: true
   gosec:
@@ -36,9 +36,4 @@ linters:
 issues:
   fix: true
   exclude-use-default: true
-  exclude-dirs:
-    - .buildkite/*
-    - .github/*
-    - docker/*
-    - internal/seed/jsonschema/templates/*
   exclude-files: []
